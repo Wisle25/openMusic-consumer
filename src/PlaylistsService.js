@@ -5,7 +5,7 @@ class PlaylistsService {
         this._pool = new Pool()
     }
 
-    async getPlaylists (playlistId) {
+    async getSongsFromPlaylist (playlistId) {
         const query = {
             text: `SELECT songs.id, songs.title, songs.performer FROM playlists
             INNER JOIN playlistsongs ON playlistsongs.playlist_id = playlists.id
